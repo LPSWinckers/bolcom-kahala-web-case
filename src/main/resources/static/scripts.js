@@ -23,9 +23,9 @@ document.addEventListener('DOMContentLoaded', function() {
                         if (winner === 0) { // Check if the game is a tie
                             winnerElemnt.textContent = 'Tie game!';
                         } else if (winner === 1) { // Check if player 1 won
-                            winnerElemnt.textContent = 'Player 1 wins! with ' + player1Store + ' stones';
+                            winnerElemnt.textContent = 'Player 1 wins! with ' + player1Store.textContent + ' stones';
                         } else {  // Player 2 won
-                            winnerElemnt.textContent = 'Player 2 wins! with ' + player2Store + ' stones';
+                            winnerElemnt.textContent = 'Player 2 wins! with ' + player2Store.textContent + ' stones';
                         }
                         updatePits(updatedBoard); // Update the pits
                         
