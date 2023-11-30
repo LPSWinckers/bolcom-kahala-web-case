@@ -18,12 +18,14 @@ document.addEventListener('DOMContentLoaded', function() {
                     if (updatedBoard[14] === -1) {  // Check if the game is over
                         const winnerElemnt = document.getElementById('winner');
                         const winner = getWinner();
+                        const player1Store = document.getElementById(6);
+                        const player2Store = document.getElementById(13);
                         if (winner === 0) { // Check if the game is a tie
                             winnerElemnt.textContent = 'Tie game!';
                         } else if (winner === 1) { // Check if player 1 won
-                            winnerElemnt.textContent = 'Player 1 wins! with ' + document.getElementById[6] + ' stones';
+                            winnerElemnt.textContent = 'Player 1 wins! with ' + player1Store + ' stones';
                         } else {  // Player 2 won
-                            winnerElemnt.textContent = 'Player 2 wins! with ' + document.getElementById[13] + ' stones';
+                            winnerElemnt.textContent = 'Player 2 wins! with ' + player2Store + ' stones';
                         }
                         updatePits(updatedBoard); // Update the pits
                         
@@ -57,8 +59,8 @@ let currentPlayer = 1; // Start with player 1
 
 function getWinner() {
     // Get the number of stones in each player's store
-    const player1Store = parseInt(document.getElementById('store-1').textContent);
-    const player2Store = parseInt(document.getElementById('store-2').textContent);
+    const player1Store = parseInt(document.getElementById(6).textContent);
+    const player2Store = parseInt(document.getElementById(13).textContent);
     
     // Determine the winner
     if (player1Store > player2Store) {
